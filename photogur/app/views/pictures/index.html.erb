@@ -3,4 +3,5 @@
 <% @pictures.each do |picture| %>
 <p><%= picture.title%>, <%= picture.artist%></p>
 <img src="<%= picture.url%>">
+<%= link_to "Show Picture", picture %>
 <% end %>
