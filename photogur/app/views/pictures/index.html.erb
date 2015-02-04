@@ -3,5 +3,5 @@
 
 <% @pictures.each do |picture| %>
 <p><%= picture.title%>, <%= picture.artist%></p>
-	<%= link_to_image_tag(picture.url), "/pictures/#{pictures.id}" %>
+	<%= link_to image_tag(picture.url), "/pictures/#{picture.id}" %>
 <% end %>
