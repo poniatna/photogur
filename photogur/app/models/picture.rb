@@ -1,11 +1,5 @@
 class Picture < ActiveRecord::Base
-	def change
-		create_table :picture do |t|
-			t.string :artist
-			t.string :title
-			t.string :url
-
-			t.timestamps
-		end
-	end		
+	scope :newest_first, -> { order("created_at DESC") }
+	scope :most_recent_five, -> { newest_first.limit(5) }
+	scope :created_before, ->(time) { where("created_at < ?", time)}
 end

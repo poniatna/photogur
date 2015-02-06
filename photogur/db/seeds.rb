@@ -1,5 +1,4 @@
 
-Picture.destroy_all
 
 Picture.create!(
 	:title => "The old church on the coast of White sea",
